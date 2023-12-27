@@ -1,0 +1,23 @@
+<div id="account-info">
+  <h5 id="account-desc">{{userData.description}}</h5>
+  <p id="account-num">{{userData.userName}}</p>
+  <h5 id="balance">{{accountBalance | number: '1.2-2'}}</h5>
+  <p id="balanceDesc">Saldo</p>
+</div>
+<p class="movements">Movimientos
+  <mat-icon fontIcon="timeline"></mat-icon>
+</p>
+<div class="body-container">
+  <ul>
+    <li class="move" *ngFor="let item of accountDetail">
+      <div class="card" [ngStyle]="{'border-left': item.accountBalance > 0 ? 'solid 2px green' : 'solid 2px red'}">
+        <h6 id="subject">{{item.subject}}</h6>
+        <p id="movementNum">{{item.movementNumber}}</p>
+        <p id="movementDate">{{item.movementDate}}</p>
+        <p id="movementBalance" *ngIf="item.coinType === 0" [ngStyle]="{'color': item.accountBalance > 0 ? 'green' : 'red'}"> U${{item.accountBalance | number: '1.2-2'}}</p>
+        <p id="movementBalance" *ngIf="item.coinType === 1" [ngStyle]="{'color': item.accountBalance > 0 ? 'green' : 'red'}" style="text-align: end; margin: 0;">RD${{item.accountBalance | number: '1.2-2'}}</p>
+        <div class="state-indicator" [ngStyle]="{'background-color': item.accountBalance > 0 ? 'green' : 'red'}"></div>
+      </div>
+    </li>
+  </ul>
+</div>

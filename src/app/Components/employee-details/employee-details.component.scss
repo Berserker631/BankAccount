@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+.movements {
+  border-bottom: solid 1px #929292;
+  background-color: #fff;
+  color: #535353;
+  margin: 0;
+  padding-left: 5px;
+
+  mat-icon {
+    color: #757575;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+#account-info {
+  background-color: #ffffff;
+  border-bottom: #929292;
+  height: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 1fr 1fr;
+  padding: 0 5px 0 5px;
+
+  p,
+  h5 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  #account-desc {
+    margin: 0;
+    padding: 0;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  #account-num {
+    margin: 0;
+    font-size: small;
+    color: #757575;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  #balance {
+    grid-area: 1 / 3 / 2 / 4;
+    font-size: large;
+    justify-content: flex-end;
+    color: green;
+  }
+
+  #balanceDesc {
+    grid-area: 2 / 3 / 3 / 4;
+    font-size: small;
+    color: #757575;
+    justify-content: flex-end;
+  }
+}
+
+
+.body-container {
+  width: 100%;
+  height: 79vh;
+  background-color: #fff;
+
+  .progress {
+    height: 500px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  ul {
+    margin: 0;
+    height: 100%;
+    padding: 0 0 0 6px;
+    list-style-type: none;
+    overflow: auto;
+  }
+
+  ul li div {
+    width: 100%;
+    height: 80px;
+    padding: 3px 5px 2px 5px;
+    background: #fff;
+    border-bottom: solid 1px #cacaca70;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
+
+    p, h6 {
+      margin: 3px;
+      text-align: start;
+      font-size: small;
+      font-weight: 500;
+    }
+  }
+
+  ul li .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+
+    .state-indicator {
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: -7px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+
+    #subject{
+      font-size: 15px;
+      grid-area: 1 / 1 / 2 / 2;
+      font-weight: 500;
+    }
+
+    #movementNum{
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #movementDate{
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #movementBalance{
+      grid-area: 2 / 2 / 3 / 3;
+      text-align: end;
+    }
+
+  }
+}

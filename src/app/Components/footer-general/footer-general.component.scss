@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  display: grid;
+  position: fixed;
+  bottom: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  box-shadow: 0 -5px 15px 0px rgba(201, 201, 201, 0.16);
+  grid-template-rows: 1fr;
+  height: 8vh;
+  width: 100%;
+  background-color: #fff;
+  color: #535353;
+
+  .icon-container {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #home {
+      font-size: 35px;
+      border-radius: 50%;
+      justify-content: center;
+    }
+
+    #search {
+      font-size: 35px;
+      border-radius: 50%;
+    }
+
+    #request {
+      font-size: 35px;
+      border-radius: 50%;
+    }
+
+    mat-icon {
+      display: flex;
+      align-items: center;
+      color: #929292;
+      font-size: 30px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .description {
+      font-size: x-small;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #929292;
+      margin: 5px 0 0 0;
+    }
+  }
+}

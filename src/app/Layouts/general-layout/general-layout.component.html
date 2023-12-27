@@ -1,0 +1,6 @@
+<div class="wrapper" [ngSwitch]="selectedRoute">
+  <app-header-general></app-header-general>
+  <app-employee-details *ngSwitchCase="'homeLayout'"></app-employee-details>
+  <app-requests *ngSwitchCase="'requests'"></app-requests>
+  <app-footer-general></app-footer-general>
+</div>

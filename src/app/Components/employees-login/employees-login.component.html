@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div class="header-logo">
+    <h1>[ Logo ]</h1>
+  </div>
+  <div class="container">
+    <p class="welcome">{{welcomeMsg}}</p>
+    <form class="employee-form">
+      <label for="fuser">Usuario: </label><br>
+      <input type="text" id="fuser" placeholder="Digite su usuario" name="fuser"><br>
+      <label for="fpass">Contraseña: </label><br>
+      <input type="text" id="fpass" placeholder="Digite su contraseña" name="fpass"><br><br>
+      <label style="display: flex; justify-content: center;">
+      </label>
+      <input type="Submit" value="Ingresar" class="submit" (click)="NavigateHome();">
+    </form>
+  </div>
+  <div class="footer">
+    <span class="icon-container">
+      <mat-icon fontIcon="currency_exchange"></mat-icon>
+      <p class="description">Tipo de cambio</p>
+    </span>
+    <span></span>
+    <span class="icon-container">
+      <mat-icon id="profile" fontIcon="account_circle"></mat-icon>
+      <p class="description">Codigo de empleado</p>
+    </span>
+    <span></span>
+    <span class="icon-container">
+      <mat-icon fontIcon="search"></mat-icon>
+      <p class="description">Ayuda</p>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  height: 6vh;
+  width: 100%;
+  background-color: #3A547C;
+  padding: 0 5px 0 5px;
+  margin: 0;
+  color: #fff;
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    mat-icon {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-size: 25px;
+    }
+
+    button {
+      height: 100%;
+      font-size: large;
+      color: #fff;
+      border: none;
+      background-color: #3A547C;
+    }
+  }
+}
+
+.welcome-msg {
+  width: 100vw;
+  height: 25px;
+  background-color: #fff;
+  color: #535353;
+  padding-left: 5px;
+  margin: 0;
+  text-align: start;
+}

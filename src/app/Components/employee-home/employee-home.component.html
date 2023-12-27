@@ -1,0 +1,18 @@
+  <div class="body-container">
+    <div class="card" *ngFor="let item of accountData">
+      <div class="personal-info">
+        <mat-icon class="accountIcon" fontIcon="account_balance" *ngIf="item.movementType === 1"></mat-icon>
+        <mat-icon class="accountIcon" fontIcon="money_off" *ngIf="item.movementType === 2"></mat-icon>
+        <p class="accountType">{{item.accountType}}</p>
+        <p class="userName" style="color: #b4b4b4;">{{item.userName}}</p>
+      </div>
+      <div class="accounts" *ngFor="let subitems of item.accounts" (click)="SendNewItem(item, subitems)">
+        <p class="nationality" style="color: #7c7c7c; border-top: solid 1px #dfdfdf; padding-top: 5px;">{{subitems.description}}</p>
+        <p class="accountNumber">{{subitems.employeeCode}}<mat-icon fontIcon="chevron_right"></mat-icon></p>
+        <p class="accountBalance" *ngIf="subitems.coinType === 0 && item.movementType === 1" [ngStyle]="{'color': subitems.accountBalance < 0 ? 'red' : 'green'}">U$ {{subitems.accountBalance}}</p>
+        <p class="accountBalance" *ngIf="subitems.coinType === 1 && item.movementType === 1" [ngStyle]="{'color': subitems.accountBalance < 0 ? 'red' : 'green'}">RD$ {{subitems.accountBalance}}</p>
+        <p class="accountBalance" *ngIf="subitems.coinType === 0 && item.movementType === 2" [ngStyle]="{'color': subitems.accountBalance < 0 ? 'red' : 'red'}">U$ {{subitems.accountBalance}}</p>
+        <p class="accountBalance" *ngIf="subitems.coinType === 1 && item.movementType === 2" [ngStyle]="{'color': subitems.accountBalance < 0 ? 'red' : 'red'}">RD$ {{subitems.accountBalance}}</p>
+      </div>
+    </div>
+  </div>
