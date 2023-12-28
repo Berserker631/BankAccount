@@ -20,6 +20,9 @@ import { FooterGeneralComponent } from './Components/footer-general/footer-gener
 import { HeaderGeneralComponent } from './Components/header-general/header-general.component';
 import { OptionMenuComponent } from './Components/option-menu/option-menu.component';
 import { RequestsLayoutComponent } from './Layouts/requests-layout/requests-layout.component';
+import { RequestFormComponent } from './Components/request-form/request-form.component';
+import { FormsModule } from "@angular/forms";
+import { SplashScreenComponent } from './Components/splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { RequestsLayoutComponent } from './Layouts/requests-layout/requests-layo
     HeaderGeneralComponent,
     OptionMenuComponent,
     RequestsLayoutComponent,
+    RequestFormComponent,
+    SplashScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ import { RequestsLayoutComponent } from './Layouts/requests-layout/requests-layo
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

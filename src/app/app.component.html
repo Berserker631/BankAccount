@@ -1,4 +1,6 @@
-<router-outlet></router-outlet>
-<!--
-<app-requests></app-requests> -->
-<!-- <app-option-menu></app-option-menu> -->
+<div class="splashScreen">
+  <app-splash-screen *ngIf="showSplash"></app-splash-screen>
+</div>
+<div class="Login">
+  <router-outlet></router-outlet>
+</div>

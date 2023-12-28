@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OptionMenuComponent } from "../../Components/option-menu/option-menu.component";
 import { RequestsLayoutComponent } from "../../Layouts/requests-layout/requests-layout.component";
 import { RequestsComponent } from "src/app/Components/requests/requests.component";
+import { RequestFormComponent } from "src/app/Components/request-form/request-form.component";
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [{
       path: 'requestHistory',
       component: RequestsComponent
     },
+    {
+      path: 'createRequest',
+      component: RequestFormComponent
+    }
   ]
   // path: 'requests',
   // outlet: 'requestLayout',
