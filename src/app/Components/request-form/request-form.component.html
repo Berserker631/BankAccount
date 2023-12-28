@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="title">
+    <p>Crear solicitud</p>
+  </div>
+  <div class="body">
+    <div class="card">
+      <form class="request-form" (submit)="OnSubmit()">
+        <span>
+          <label for="fdesc">Descripcion: </label>
+          <input type="text" id="fuser" placeholder="Ingrese una descripcion" name="fdesc" required="true">
+          <label for="famount">Monto: </label>
+          <input type="number" id="fpass" placeholder="Ingrese el monto" name="famount" required="true"  [(ngModel)]="amount">
+          <span class="calculateAmount">
+            <h3 class="calculateAmount" *ngIf="amount != 0 ">{{amount / 4  | number: '1.2-2'}} / Semana</h3>
+            <!-- <h2 class="requestLabel">El monto a pagar es {{amount}}/{{lapse}} = {{dues}}</h2> -->
+          </span>
+        </span>
+        <input type="Submit" value="Ingresar" class="submit">
+      </form>
+    </div>
+  </div>
+</div>

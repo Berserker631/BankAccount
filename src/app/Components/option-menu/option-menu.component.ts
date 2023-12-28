@@ -10,7 +10,7 @@ export class OptionMenuComponent {
   constructor(private router: Router) { }
 
   NavigateRequest() {
-    this.router.navigate([''])
+    this.router.navigate(['requestMenu/createRequest'])
   }
 
   NavigateAccounts() {

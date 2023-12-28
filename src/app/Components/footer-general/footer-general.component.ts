@@ -14,6 +14,6 @@ export class FooterGeneralComponent {
   }
 
   NavigateRequest(){
-    this.router.navigate(['requests'])
+    this.router.navigate(['requestMenu/'])
   }
 }
