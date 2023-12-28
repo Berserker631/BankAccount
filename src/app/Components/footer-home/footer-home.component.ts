@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer-home.component.scss']
 })
 export class FooterHomeComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
-  NavigateHome(){
+  NavigateHome() {
     this.router.navigate(['homeLayout'])
   }
 
-  NavigateRequest(){
-    this.router.navigate(['requests'])
+  NavigateRequest() {
+    this.router.navigate(['requestMenu'])
   }
 }

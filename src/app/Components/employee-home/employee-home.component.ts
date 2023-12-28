@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataServiceService } from '../../Services/data-service.service';
 import { Router } from '@angular/router';
 import { account } from 'src/app/Interface/account-interface';
 import { accountDetail } from 'src/app/Interface/account-detail-interface';
+import { CookiesService } from 'src/app/Services/cookie.service';
 
 @Component({
   selector: 'app-employee-home',
@@ -11,9 +12,9 @@ import { accountDetail } from 'src/app/Interface/account-detail-interface';
 })
 export class EmployeeHomeComponent {
   accountData: any = [];
-  constructor(private dataService: DataServiceService, private router: Router){}
+  constructor(private dataService: DataServiceService, private router: Router, private cookieService: CookiesService) { }
 
-  SendNewItem(account: account, detail: accountDetail ){
+  SendNewItem(account: account, detail: accountDetail) {
     const route: string = 'accountDetail';
     let selectedAccountDetail = JSON.stringify(detail);
     let selectedAccount = JSON.stringify(account);
@@ -22,7 +23,7 @@ export class EmployeeHomeComponent {
     this.router.navigate(['accountDetail']);
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.accountData = this.dataService.getAccountData();
   }
 }

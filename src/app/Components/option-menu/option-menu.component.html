@@ -3,19 +3,19 @@
     <p>Solicitudes</p>
   </div>
   <div class="menu-container">
-    <div class="option-button">
+    <div class="option-button" (click)="NavigateRequest()">
       <span>
         <mat-icon id="monetization_on" fontIcon="monetization_on"></mat-icon>
         <p>Realizar prestamo</p>
       </span>
     </div>
-    <div class="option-button">
+    <div class="option-button" (click)="NavigateAccounts()">
       <span>
         <mat-icon id="payments" fontIcon="payments"></mat-icon>
         <p>Cuentas</p>
       </span>
     </div>
-    <div class="option-button">
+    <div class="option-button" (click)="NavigateHistory()">
       <span>
         <mat-icon id="savings" fontIcon="savings"></mat-icon>
         <p>Historial de prestamos</p>
